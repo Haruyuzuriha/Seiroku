@@ -15,7 +15,7 @@ plugins {
 
 dependencies {
     implementation(project(":engine-api"))
-    runtimeOnly(project(":engine-core"))
+    implementation(project(":engine-core"))
 
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-security")
