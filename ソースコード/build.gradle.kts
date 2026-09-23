@@ -1,12 +1,6 @@
 import org.gradle.api.plugins.JavaPluginExtension
 import org.gradle.jvm.toolchain.JavaLanguageVersion
 
-/*
- * Root build file: configuration shared by every module (engine-api, engine-core,
- * engine-web, engine-cli). Module-specific dependencies and plugins live in each
- * module's own build.gradle.kts.
- */
-
 allprojects {
     repositories {
         mavenCentral()
@@ -27,7 +21,7 @@ subprojects {
         "testRuntimeOnly"("org.junit.platform:junit-platform-launcher")
     }
 
-    tasks.withType<Test> {
+    tasks.withType<Test>().configureEach {
         useJUnitPlatform()
     }
 }
