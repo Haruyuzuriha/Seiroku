@@ -13,6 +13,6 @@ dependencies {
     api(project(":engine-api"))
 
     implementation("org.mybatis:mybatis:3.5.19")
-    implementation("org.aspectj:aspectjrt:1.9.22")
-    implementation("org.aspectj:aspectjweaver:1.9.22")
+    implementation("org.springframework:spring-beans:6.2.1")
+    implementation("org.springframework:spring-context:6.2.1")
 }

@@ -1,3 +1,6 @@
+import org.gradle.api.plugins.JavaPluginExtension
+import org.gradle.jvm.toolchain.JavaLanguageVersion
+
 /*
  * Root build file: configuration shared by every module (engine-api, engine-core,
  * engine-web, engine-cli). Module-specific dependencies and plugins live in each
@@ -13,14 +16,14 @@ allprojects {
 subprojects {
     apply(plugin = "java")
 
-    java {
+    extensions.configure<JavaPluginExtension> {
         toolchain {
-            languageVersion = JavaLanguageVersion.of(26)
+            languageVersion.set(JavaLanguageVersion.of(26))
         }
     }
 
     dependencies {
-        "testImplementation"(libs.junit.jupiter)
+        "testImplementation"("org.junit.jupiter:junit-jupiter:6.0.1")
         "testRuntimeOnly"("org.junit.platform:junit-platform-launcher")
     }
 
