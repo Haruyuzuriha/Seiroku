@@ -13,7 +13,7 @@ The project is named after **Honda Seiroku** (1866–1952), a Japanese forester 
 ## Tech stack
 
 | Layer | Choice |
-|---|---|
+| --- | --- |
 | Language / Build | Java (Gradle) |
 | Database | PostgreSQL |
 | Migrations | Liquibase |
@@ -30,4 +30,4 @@ A CLI is planned to sit on top of the engine as a first consumer of the public A
 
 ## Status
 
-Early stage 
+Early stage
