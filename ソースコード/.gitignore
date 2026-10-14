@@ -1,9 +1,0 @@
-# Gradle build outputs & cache
-.gradle/
-build/
-bin/
-
-# Eclipse-specific IDE metadata
-.classpath
-.project
-.settings/
